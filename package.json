@@ -1,0 +1,20 @@
+{
+  "name": "truthlens-backend",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Secure backend API for the TruthLens fact-checking app",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0"
+  }
+}

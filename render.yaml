@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: truthlens-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GOOGLE_FACT_CHECK_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4.1-mini
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "20"
